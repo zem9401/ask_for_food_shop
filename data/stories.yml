@@ -106,8 +106,21 @@ stories:
 
 - story: happy path 1
   steps:
-  - food_form
+  - form: food_form
   - form{"name": "food_form" }
   - form{"name": null}
+
+- request_restaurant
+    - weather_form
+    - form{"name": "food_form"}
+    - slot{"requested_slot": "address"}
+- form:
+- inform{"address": "广州"}
+    - form: weather_form
+    - slot{"address": "广州"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+- affirm
+    - utter_answer_affirm
 
 
