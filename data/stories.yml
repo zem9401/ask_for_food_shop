@@ -1,0 +1,113 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: say affirm with greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_affirm
+
+- story: say affirm
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: say no with greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_deny
+
+- story: say no
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: thanks with greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: thanks
+  - action: utter_thanks
+
+- story: thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: who are you with greet
+  steps:
+  - intent: whoareyou
+  - action: utter_whoareyou
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: whoareyou
+  - action: utter_whoareyou
+
+- story: what to do
+  steps:
+  - intent: whattodo
+  - action: utter_whattodo
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: whattodo
+  - action: utter_whattodo
+
+- story: happy path
+  steps:
+  - intent: request_restaurant
+  - action: utter_request_restaurant
+
+- story: happy path 1
+  steps:
+  - food_form
+  - form{"name": "food_form" }
+  - form{"name": null}
+
+

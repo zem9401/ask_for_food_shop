@@ -1,0 +1,7 @@
+/.idea/*
+/.vscode/*
+/code/.idea/*
+/code/__pycache__/*
+*.class
+!/*.py
+/Lib

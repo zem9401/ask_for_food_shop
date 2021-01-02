@@ -1,0 +1,103 @@
+version: "2.0"
+
+intents:
+  - mood_great
+  - mood_unhappy
+  - affirm
+  - deny
+  - greet
+  - goodbye
+  - thanks
+  - whoareyou
+  - whattodo
+  - request_restaurant
+
+slots:
+  food_shop:
+    type: unfeaturized
+  address:
+    type: unfeaturized
+
+entities:
+  - food_shop
+  - address
+
+responses:
+  utter_greet:
+  - text: "您好！请问我可以帮到您吗？"
+  - text: "您好！很高兴为您服务。请说出您要查询的功能？"
+  - text: "您好！我是您的虚拟助理，请问需要什么帮助嘛？"
+
+  utter_cheer_up:
+  - text: "希望这个可以使你振作起来呀~~"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_thanks:
+  - text: "嗯呢。不用客气~"
+  - text: "这是我应该做的，主人~"
+  - text: "嗯嗯，合作愉快！"
+
+  utter_did_that_help:
+  - text: "主人还有什么需要帮忙的呀"
+
+  utter_happy:
+  - text: "太好了，那咱们继续"
+
+  utter_goodbye:
+  - text: "好的，再见"
+  - text: "好的，拜拜"
+  - text: "期待下次相见~"
+  - text: "期待下次再见！"
+  - text: "嗯嗯，下次需要时随时记得我哟~"
+  - text: "see you!"
+  - text: "有需要随时找我哦！"
+
+  utter_affirm:
+  - text: "嗯嗯，好的！"
+  - text: "嗯嗯，很开心能够帮您解决问题~"
+  - text: "嗯嗯，还需要什么我能够帮助您的呢？"
+
+  utter_deny:
+  - text: "主人，您不开心吗？不要离开我哦"
+  - text: "怎么了，主人？"
+  - text: "主人有什么心事么？"
+
+  utter_whoareyou:
+  - text: "您好！我是Jarvis呀，您的AI智能助理"
+
+  utter_iamabot:
+  - text: "您好！我是Jarvis呀，您的AI智能助理"
+
+  utter_whattodo:
+  - text: "您好！很高兴为您服务，作为干饭人，我目前只支持查询饭店哦。"
+
+  utter_request_restaurant:
+  - text: "附近有肯德基店，距离100米"
+  - text: "这儿附近吃的地方很多哦，居然还有沙县小吃"
+
+  utter_default:
+  - text: "抱歉主人，请恕我愚钝，没有听懂您的意思，请换种说法吧~"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+forms:
+- food_form
+
+actions:
+- utter_default
+- utter_request_restaurant
+- utter_whattodo
+- utter_iamabot
+- utter_whoareyou
+- utter_deny
+- utter_affirm
+- utter_goodbye
+- utter_happy
+- utter_did_that_help
+- utter_thanks
+- utter_cheer_up
+- utter_greet
+- action_default_fallback
+

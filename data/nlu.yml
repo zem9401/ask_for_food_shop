@@ -1,0 +1,183 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - good afternoon
+    - 你好
+    - 你好啊
+    - 早上好
+    - 晚上好
+    - hello
+    - hi
+    - 嗨
+    - 嗨喽
+    - 见到你很高兴
+    - 嘿
+    - 早
+    - 上午好
+    - hello哈喽
+    - 哈喽哈喽
+    - hello hello
+    - 喂喂
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - 别逼逼叨叨，滚犊子，hhh
+    - 88
+    - 886
+    - 再见
+    - 拜
+    - 拜拜
+    - 拜拜，希望能再次遇到你
+    - 下次见
+    - 回头见
+    - 下次再见
+    - 下次再聊啦
+    - 有空再聊
+    - 先这样吧
+    - 好了，就说这么多了
+    - 好了，先这样
+    - 没事
+    - 回头见
+
+- intent: affirm
+  examples: |
+    - 是的
+    - 当然
+    - 好的
+    - ok
+    - 嗯
+    - 可以
+    - 你可以这么做
+    - 你做得可以啊
+    - 同意
+    - 听起来不错
+    - 是这样的
+    - 的确是这样子的
+    - 我同意你的观点
+    - 对的
+    - 好滴
+    - 行
+    - 还行
+    - 当然可以
+
+- intent: mood_great
+  examples: |
+    - 棒棒棒
+    - 蛮开心的
+    - 挺不错的啊
+    - 很好啊
+
+- intent: mood_unhappy
+  examples: |
+    - 有点沮丧
+    - 难过呀
+    - 非常难受
+    - 不好
+    - 不是很好
+    - 好难过
+    - 难过
+    - 不开心
+
+- intent: whoareyou
+  examples: |
+    - 你是谁
+    - 我知道你吗
+    - 谁
+    - 我认识你吗
+    - 这是谁啊
+    - 是谁
+    - 请问你是谁
+    - 请问我认识你吗
+    - 你是哪位
+    - 你是？
+    - 是谁？
+    - 可以告诉我你的名字吗
+    - 你叫什么名字
+
+- intent: whattodo
+  examples: |
+    - 你支持什么功能
+    - 你有什么功能
+    - 你能干什么
+    - 你能做什么
+    - 你都知道一些什么
+
+- intent: thanks
+  examples: |
+    - 谢谢
+    - thanks
+    - thank you
+    - 真的太感谢你了，帮了我大忙
+    - 谢谢你帮了我大忙
+    - 你帮了我大忙，谢谢你小智
+    - 非常感谢
+    - 谢了
+
+- intent: nothanks
+  examples: |
+    - 不用谢
+    - 这是我应该做的
+    - 不用谢呀，不用~
+    - 应该的
+    - 说的我都不好意思了
+    - 哎呀，不用
+
+- intent: deny
+  examples: |
+    - 不
+    - no
+    - 不可以
+    - 不是的
+    - 不认同
+    - 否定
+    - 不是这样子的
+    - 我不同意你的观点
+    - 不同意
+    - 不好
+    - 你长得很美，就不要想得太美。
+    - 拒绝
+    - 不行
+    - 不用
+    - 不要
+
+- intent: request_restaurant
+  examples: |
+    - 饭店
+    - 小吃
+    - 肯德基
+    - 查询饭店
+    - 帮我查查[佛山](address)的美食店铺有[店铺](food_shop)
+    - 我想知道[附近](address)的饭店情况
+    - 我想知道[杭州西湖](address)的小吃店有哪些
+    - [北京故宫](address)的[小吃店铺](food_shop)
+    - 查下[广州](address)的小吃店有
+    - 帮我查查[杭州西湖](address)的
+    - [深圳龙岗区](address)有这几个[饭店](food_shop)
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - 你是机器人吗？
+    - 你是人类么？
+    - 我正在和机器人交谈？
+
+
