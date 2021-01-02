@@ -57,7 +57,7 @@ class FoodForm(FormAction):
         for i in food_shop_list:
             food_shop_str = food_shop_str + i + ', '
         dispatcher.utter_message("%s 的附近有以下几个美食小店：%s" % (address, food_shop_str))
-        return [Restarted()]
+        return []
 
 def get_text_weather_date(address, date_time, date_time_number):
     try:
